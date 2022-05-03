@@ -1,0 +1,132 @@
+/* 
+    -- Responsive Web Design Principles -- 
+    1) Fluid Layouts
+        - allow webpage to adapt to current viewport width/height
+        - use % (or vh/vw) unit instead of px for elements that should adapt to the viewport
+        - use max-width instead of width
+
+    2) Responsive Units
+        - Use rem unit instead of px for most lengths to make it easy to scale the entire layout down or up automatically 
+        - Tip: setting 1rem to 10px for easy calculations
+
+    3) Flexible Images
+        - By default, images don't scale automatically as we change the viewport, so we need to change it 
+        - Always use % for image dimensions, together with the max-width property
+
+    4) Media Queries
+        - Bring resposive sites to life
+        - Change CSS styles on certain viewport widths (also known as breakpoints)
+        - Different looks to the website for different types of devices 
+
+    ** doing any of these on its' own is useless, everything works together and must start from the top down. 
+
+    -- Desktop or Mobile first? -- 
+    People are more likely to visit a website on a phone more than a desktop...therefore mobile is the most important. However, going desktop to mobile is a viable process. Once you are accustomed with CSS you can go mobile to desktop, which will end up being an easier method. 
+
+    -- REM and Max-Width -- 
+    When max-width is used, the element will take up the given width when the size of the viewport exceeds it. However, as soon as the viewport becomes smaller than the given width, the element will decrease in size with it. 
+    
+    1 REM = 16px by default! The beauty of using rem is that you can actually change the value of 1 rem and change every single element that uses rem units at once. instead of px where you have to change every element 
+
+    USABILITY: if we set the font-size to a fixed value (10px) in the html element, this sets up the possibilty of future issues if a user needs to decrease/increase their font size for visibility purposes. Therefore, we use percentages to change along with the size of the user's browser 
+
+    10px - > 16px can be calculated by doing 10/16 which equals 62.5%. So we use this now in our html element
+    
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* by doing this, we now set the rem unit to = 10px, easier conversion */
+  /* font-size: 10px; */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+}
+
+.section-hero {
+  background-color: #fae5d3;
+  padding: 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+  margin: 0 auto;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3.2rem;
+  letter-spacing: -1px;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+.hero-image {
+  /* % makes it a flexible image */
+  width: 100%;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.2rem 3.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  /* add the transition in the state before the hover */
+  transition: background-color 0.3s;
+}
+
+/* helper class */
+/* generic, resuable class you can use wherever you want on multiple elements!  */
+/* if you added right margin to button, every button you would use with that class would then have a margin right... */
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+
+.btn-primary:link,
+.btn-primary:visited {
+  background-color: #e67e22;
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: #b8651b;
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+  color: black;
+  background-color: white;
+}
+.btn-secondary:hover,
+.btn-secondary:active {
+  color: black;
+  background-color: #fae5d3;
+  /* how to get the border to go inwards */
+  /* X, Y, Blur, Size, Color */
+  /* inset means "inside" */
+  box-shadow: inset 0 0 0 3px white;
+}
