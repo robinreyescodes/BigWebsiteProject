@@ -47,15 +47,16 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1;
   color: #555;
+  position: relative;
 }
 
 .section-hero {
   background-color: #fae5d3;
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
@@ -65,6 +66,7 @@ body {
   align-items: center;
   gap: 9.6rem;
   margin: 0 auto;
+  padding: 3.2rem;
 }
 
 .heading-primary {
@@ -94,6 +96,7 @@ body {
   padding: 1.2rem 3.2rem;
   text-decoration: none;
   border-radius: 8px;
+  font-weight: 600;
   /* add the transition in the state before the hover */
   transition: background-color 0.3s;
 }
@@ -129,4 +132,55 @@ body {
   /* X, Y, Blur, Size, Color */
   /* inset means "inside" */
   box-shadow: inset 0 0 0 3px white;
+}
+
+.customer-container {
+  margin-top: 4.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.customer-images {
+  display: flex;
+}
+
+.customer-images img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 2px solid #fdf2e9;
+}
+.customer-images img:last-child {
+  margin: 0;
+}
+.customer-text {
+  font-size: 1.4rem;
+}
+
+.customer-text span {
+  font-weight: 700;
+  color: #cf711f;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fae5d3;
+  /* keeping height fixed; making nav sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 4.4rem;
+  font-size: 1.4rem;
 }
