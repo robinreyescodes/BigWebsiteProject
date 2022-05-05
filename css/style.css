@@ -34,6 +34,10 @@
     
 */
 
+/******************************/
+/* GENERAL */
+/******************************/
+
 * {
   padding: 0;
   margin: 0;
@@ -53,6 +57,35 @@ body {
   color: #555;
   position: relative;
 }
+
+/* used to center content in our page */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+/* Reusable Grid  */
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+/* different variations of grid to make responsive */
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/******************************/
+/* HERO SECTION */
+/******************************/
 
 .section-hero {
   background-color: #fae5d3;
@@ -134,8 +167,12 @@ body {
   box-shadow: inset 0 0 0 3px white;
 }
 
+/******************************/
+/* CUSTOMER COMPONENT */
+/******************************/
+
 .customer-container {
-  margin-top: 4.8rem;
+  margin-top: 6.4rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -164,6 +201,10 @@ body {
   color: #cf711f;
 }
 
+/******************************/
+/* HEADER */
+/******************************/
+
 .header {
   display: flex;
   align-items: center;
@@ -178,9 +219,50 @@ body {
   height: 2rem;
 }
 
-.main-nav ul {
+/******************************/
+/* NAVIGATION */
+/******************************/
+
+.main-nav-list {
   display: flex;
+  align-items: center;
   list-style: none;
-  gap: 4.4rem;
-  font-size: 1.4rem;
+  gap: 3.2rem;
+}
+
+/* make sure links are always inline blocks */
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+/* in english: only do this if
+main-nav-link and nav-cta are in an 
+element together! */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  border-radius: 8px;
+  padding: 1.2rem 1.6rem;
+  color: white;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/******************************/
+/* HOW IT WORKS SECTION */
+/******************************/
+
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orangered;
 }
