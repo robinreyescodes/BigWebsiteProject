@@ -32,10 +32,10 @@
 
     10px - > 16px can be calculated by doing 10/16 which equals 62.5%. So we use this now in our html element
     
-*/
+    
 
 /******************************/
-/* GENERAL */
+/* CUSTOMER COMPONENT */
 /******************************/
 
 * {
@@ -43,7 +43,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 html {
   /* by doing this, we now set the rem unit to = 10px, easier conversion */
   /* font-size: 10px; */
@@ -57,120 +56,6 @@ body {
   color: #555;
   position: relative;
 }
-
-/* used to center content in our page */
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
-}
-
-/* Reusable Grid  */
-.grid {
-  display: grid;
-  gap: 9.6rem;
-}
-
-/* different variations of grid to make responsive */
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/******************************/
-/* HERO SECTION */
-/******************************/
-
-.section-hero {
-  background-color: #fae5d3;
-  padding: 4.8rem 0 9.6rem 0;
-}
-
-.hero {
-  max-width: 130rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 9.6rem;
-  margin: 0 auto;
-  padding: 3.2rem;
-}
-
-.heading-primary {
-  font-size: 5.2rem;
-  line-height: 1.05;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 3.2rem;
-  letter-spacing: -1px;
-}
-
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-bottom: 4.8rem;
-}
-
-.hero-image {
-  /* % makes it a flexible image */
-  width: 100%;
-}
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  font-size: 2rem;
-  padding: 1.2rem 3.2rem;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  /* add the transition in the state before the hover */
-  transition: background-color 0.3s;
-}
-
-/* helper class */
-/* generic, resuable class you can use wherever you want on multiple elements!  */
-/* if you added right margin to button, every button you would use with that class would then have a margin right... */
-.margin-right-sm {
-  margin-right: 1.6rem;
-}
-
-.btn-primary:link,
-.btn-primary:visited {
-  background-color: #e67e22;
-  color: white;
-}
-
-.btn-primary:hover,
-.btn-primary:active {
-  background-color: #b8651b;
-}
-
-.btn-secondary:link,
-.btn-secondary:visited {
-  color: black;
-  background-color: white;
-}
-.btn-secondary:hover,
-.btn-secondary:active {
-  color: black;
-  background-color: #fae5d3;
-  /* how to get the border to go inwards */
-  /* X, Y, Blur, Size, Color */
-  /* inset means "inside" */
-  box-shadow: inset 0 0 0 3px white;
-}
-
-/******************************/
-/* CUSTOMER COMPONENT */
-/******************************/
-
 .customer-container {
   margin-top: 6.4rem;
   display: flex;
@@ -264,5 +149,26 @@ element together! */
 
 .section-how {
   padding: 9.6rem 0;
-  background-color: orangered;
+}
+
+.step-image-box img {
+  width: 40%;
+}
+
+.step-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
