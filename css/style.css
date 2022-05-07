@@ -159,6 +159,7 @@ element together! */
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .step-number {
@@ -171,4 +172,34 @@ element together! */
 .step-description {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+/* psuedo elements don't work on images... */
+
+.step-image-box::before,
+.step-image-box::after {
+  content: "";
+  display: block;
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-image-box::before {
+  width: 60%;
+  /* height doesn't work here */
+  /* height will be 0 */
+  /* use padding in order to get a 'fake' height */
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+}
+
+.step-image-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #f8d8bd;
+  z-index: -1;
 }
