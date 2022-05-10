@@ -144,6 +144,15 @@ element together! */
 }
 
 /******************************/
+/* FEATURED SECTION */
+/******************************/
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+/******************************/
 /* HOW IT WORKS SECTION */
 /******************************/
 
