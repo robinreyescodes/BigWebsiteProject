@@ -357,3 +357,67 @@ element together! */
   height: 3rem;
   color: #e67e22;
 }
+
+/******************************/
+/* TESTIMONIALS */
+/******************************/
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  /* fr's can add up to 100 to have the same height */
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  /* line-height has no units after while letter-spacing does */
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-constomer {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+/* IMAGES ARE INLINE ITEMS, MAKE THEM BLOCK */
+/* LINKS NEED PSUEDO CLASS */
+/* DISPLAY INLINE BLOCK GIVES PADDING/HEIGHT TO ITEMS THAT ARENT */
+/* Gallery images */
+.gallery {
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+.gallery-img {
+  display: block;
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.gallery-img:hover {
+  transform: scale(1.2);
+}
