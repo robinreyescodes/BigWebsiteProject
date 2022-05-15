@@ -129,7 +129,7 @@ body {
   border-radius: 8px;
   font-weight: 600;
   /* add the transition in the state before the hover */
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 /* helper class */
@@ -137,6 +137,14 @@ body {
 /* if you added right margin to button, every button you would use with that class would then have a margin right... */
 .margin-right-sm {
   margin-right: 1.6rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .btn-primary:link,
