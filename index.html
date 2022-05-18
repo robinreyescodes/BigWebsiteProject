@@ -537,9 +537,55 @@
 
       <!-- FORM SECTION -->
       <section class="section-cta">
-        <div class="container cta">
-          <div class="cta-text-box">CTA</div>
-          <div class="cta-image-box">IMG</div>
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Get your first meal for free!</h2>
+              <p class="cta-text">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+
+              <form class="cta-form" action="#">
+                <div>
+                  <label for="fullname">Full Name</label>
+                  <input
+                    id="fullname"
+                    type="text"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">Email Address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="email@gmail.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="select">Where did you hear form us?</label>
+                  <select id="select" required>
+                    <option value="">Please choose an option</option>
+                    <option value="friends">Friends</option>
+                    <option value="family">Family</option>
+                    <option value="internet">Internet</option>
+                    <option value="Youtube">Youtube</option>
+                  </select>
+                </div>
+
+                <button class="btn">Sign up now</button>
+              </form>
+            </div>
+            <div
+              class="cta-image-box"
+              role="img"
+              aria-label="photo of woman smiling while eating"
+            ></div>
+          </div>
         </div>
       </section>
     </main>
