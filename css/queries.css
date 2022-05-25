@@ -14,7 +14,7 @@
 /* below 1200px  - LANDSCAPE TABLETS*/
 @media (max-width: 75em) {
   html {
-    font-size: 0.56rem;
+    font-size: 56.25%;
   }
 
   .heading-secondary {
@@ -39,5 +39,57 @@
   }
   .testimonials-container {
     padding: 9.6rem 3.2rem;
+  }
+}
+
+/* below 906px - tablets vertical*/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-image {
+    width: 60%;
+  }
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+  .hero-text-box {
+    padding: 4.5rem;
+  }
+  .customer-container {
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .logos img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 2.4rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    margin-top: 1rem;
+    background-color: rgb(79, 18, 18);
+    color: white;
   }
 }
