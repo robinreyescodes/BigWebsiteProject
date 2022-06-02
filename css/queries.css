@@ -57,9 +57,6 @@
   .hero-img-box {
     text-align: center;
   }
-  .hero-text-box {
-    padding: 4.5rem;
-  }
   .customer-container {
     justify-content: center;
     margin-top: 3rem;
@@ -135,5 +132,68 @@
 
   .nav-open .icon-mobile-nav[name="menu-outline"] {
     display: none;
+  }
+}
+
+/* 
+  Below 700px - smaller tablets
+*/
+
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+  .logo-column,
+  .address-col {
+    grid-column: span 3;
+  }
+}
+/* 
+  below 544 pixels - phones
+*/
+@media (max-width: 34em) {
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 0 3.2rem;
+  }
+  .section-hero {
+    padding: 2.4rem 0 4.6.4em 0;
+  }
+  .logos img {
+    height: 2rem;
+  }
+
+  .step-image-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-image-box:nth-child(6) {
+    grid-row: 5;
+  }
+  .feature {
+    text-align: center;
   }
 }
