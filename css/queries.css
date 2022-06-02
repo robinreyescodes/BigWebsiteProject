@@ -196,4 +196,7 @@
   .feature {
     text-align: center;
   }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
